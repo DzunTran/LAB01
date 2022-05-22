@@ -8,7 +8,7 @@ public class EvenOdd {
         System.out.println("Please input the number: ");
         int num = scanner.nextInt();
 
-        boolean calNum = num % 2 == 0;
+        boolean calNum = (num % 2 == 0);
         String msg = calNum? "Even Number" : "Odd Number";
         System.out.println(msg);
     }
