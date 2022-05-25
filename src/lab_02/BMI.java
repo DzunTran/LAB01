@@ -1,8 +1,9 @@
-package Lab_02;
+package lab_02;
 
 import java.util.Scanner;
 
 public class BMI {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input the weight: ");
