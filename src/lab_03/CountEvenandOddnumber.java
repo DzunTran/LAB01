@@ -3,7 +3,7 @@ package lab_03;
 public class CountEvenandOddnumber {
     public static void main(String[] args) {
 
-        int [] array = {9,8,9,4,5,2,1,5,7,11,18,19,100,200,301};
+        int [] array = {9,8,9,4,5,2,1,5,7,11,18,19,100,200,301,500,600,1111};
         int EvenNum = 0;
         int OddNum = 0;
 
