@@ -4,24 +4,22 @@ public class SortMinMax {
     public static void main(String[] args) {
 
         int[] arrayNum = {9, 8, 9, 4, 5, 2, 1, 5, 7, 11, 18, 19, 100, 200, 301, 500, 600, 1111};
-        int i = 0;
-        int Num = 0;
+        int temp;
 
-        while (i < arrayNum.length) {
-            for (int index = i; index < arrayNum.length; index++) {
-                if (arrayNum[index] < arrayNum[i]) {
-                    Num = arrayNum[i];
-                    arrayNum[i] = arrayNum[index];
-                    arrayNum[index] = Num;
+        for (int i = 0; i < arrayNum.length - 1; i++) {
+            for (int j = i + 1; j < arrayNum.length; j++) {
+                if (arrayNum[i] > arrayNum[j]) {
+                    temp = arrayNum[i];
+                    arrayNum[i] = arrayNum[j];
+                    arrayNum[j] = temp;
                 }
-                i++;
             }
         }
-
-        System.out.print("Value from min to max: ");
-        for (int numValue : arrayNum) {
-            System.out.print(numValue + ", ");
+        System.out.println("Sort an integer array from min to max: ");
+        for (int i = 0; i < arrayNum.length; i++) {
+            System.out.println(arrayNum[i]);
         }
     }
 }
+
 
