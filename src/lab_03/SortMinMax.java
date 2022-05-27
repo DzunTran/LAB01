@@ -17,7 +17,7 @@ public class SortMinMax {
         }
         System.out.println("Sort an integer array from min to max: ");
         for (int i = 0; i < arrayNum.length; i++) {
-            System.out.println(arrayNum[i]);
+            System.out.print(arrayNum[i] + " ");
         }
     }
 }
