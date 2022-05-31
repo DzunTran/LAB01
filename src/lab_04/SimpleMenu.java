@@ -9,31 +9,38 @@ public class SimpleMenu {
 
     public static void main(String[] args) {
 
-        printMenu();
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please select the number in the menu: ");
-        int userInput = scanner.nextInt();
-        List<Integer> myList = listNumber();
+        boolean isExist = false;
 
-        switch (userInput){
-            case 1:
-                printAllNumber(myList);
-                break;
-            case 2:
-                printAllNumber(myList);
-                printMaxValue(myList);
-                break;
-            case 3:
-                printAllNumber(myList);
-                printMinValue(myList);
-                break;
-            case 4:
-                printAllNumber(myList);
-                searchNumber(myList);
-                break;
-            default:
-                System.out.println("");
-                break;
+        while(!isExist) {
+            printMenu();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Please select the number in the menu: ");
+            int userInput = scanner.nextInt();
+            List<Integer> myList = listNumber();
+
+            switch (userInput){
+                case 1:
+                    printAllNumber(myList);
+                    break;
+                case 2:
+                    printAllNumber(myList);
+                    printMaxValue(myList);
+                    break;
+                case 3:
+                    printAllNumber(myList);
+                    printMinValue(myList);
+                    break;
+                case 4:
+                    printAllNumber(myList);
+                    searchNumber(myList);
+                    break;
+                case 5:
+                    isExist = true;
+                    break;
+                default:
+                    System.out.println("");
+                    break;
+            }
         }
 
     }
@@ -44,11 +51,12 @@ public class SimpleMenu {
         }
     }
     private static void printMenu(){
-        System.out.print("==MENU==\n");
+        System.out.print("\n==MENU==\n");
         System.out.print("1. Print all numbers\n");
         System.out.print("2. Print maximum value\n");
         System.out.print("3. Print minimum value\n");
         System.out.print("4. Search number\n");
+        System.out.print("5. Exist\n");
     }
     private static List<Integer> listNumber(){
         System.out.print("Please input the size of array: ");
