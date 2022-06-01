@@ -9,9 +9,9 @@ public class SimpleMenu {
 
     public static void main(String[] args) {
 
-        boolean isExist = false;
+        boolean isExit = false;
 
-        while(!isExist) {
+        while(!isExit) {
             printMenu();
             Scanner scanner = new Scanner(System.in);
             System.out.print("Please select the number in the menu: ");
@@ -35,7 +35,7 @@ public class SimpleMenu {
                     searchNumber(myList);
                     break;
                 case 5:
-                    isExist = true;
+                    isExit = true;
                     break;
                 default:
                     System.out.println("");
@@ -56,7 +56,7 @@ public class SimpleMenu {
         System.out.print("2. Print maximum value\n");
         System.out.print("3. Print minimum value\n");
         System.out.print("4. Search number\n");
-        System.out.print("5. Exist\n");
+        System.out.print("5. Exit\n");
     }
     private static List<Integer> listNumber(){
         System.out.print("Please input the size of array: ");
@@ -97,18 +97,18 @@ public class SimpleMenu {
     }
     private static void searchNumber (List<Integer> myList){
 
-        boolean exitsSearchNum = false;
+        boolean searchNum = false;
         System.out.print("\nPlease input the number: ");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         for (int i = 0; i < myList.size(); i++) {
             if (number == myList.get(i)) {
-                exitsSearchNum = true;
+                searchNum = true;
                 System.out.printf("The number %d in the index %d", number, i);
                 break;
             }
         }
-        if(exitsSearchNum == false) {
+        if(searchNum == false) {
             System.out.println("Number is not in the list!!!!!!");
         }
     }
